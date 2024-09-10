@@ -1,0 +1,241 @@
+<!-- <!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datepicker UI</title>
+</head>
+<body>
+    <div class="datepicker-container">
+        <label for="datepicker">Selecciona una fecha:</label>
+        <input type="date" id="datepicker" class="custom-datepicker">
+    </div>
+</body>
+</html>
+
+<style>
+   
+.custom-datepicker {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    font-family: "Nerko One", cursive;
+    position: relative;
+    font-size: 16px;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: #333;
+    width: 100%;
+    max-width: 235px;
+    background-image: url('https://img.icons8.com/?size=100&id=imTS7WN6s95I&format=png&color=000000') ,linear-gradient(#ccc, #ccc);; 
+    background-position: right 10px center, right 50px center; 
+    background-repeat: no-repeat;
+    background-size: 30px 30px, 1px 60%;
+}
+
+.custom-datepicker::-webkit-calendar-picker-indicator {
+    opacity: 0;
+    cursor: pointer;
+}
+
+.datepicker-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 320px;
+    margin: 50px auto;
+    font-family: "Nerko One", cursive;
+}
+
+.datepicker-container label {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+}
+</style> -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datepicker Personalizado</title>
+</head>
+<body>
+
+    <div class="datepicker-container">
+        <!-- Campo para seleccionar la fecha -->
+        <input type="text" class="datepicker-input" placeholder="dd/mm/yyyy" readonly>
+        <!-- Icono de calendario -->
+        <span class="calendar-icon"></span>
+
+        <!-- El Datepicker (ventana emergente) -->
+        <div class="datepicker">
+            <div class="datepicker-header">
+                <span class="prev-month"><img width="20"
+                     src="https://img.icons8.com/?size=100&id=wcK894NIt5Wv&format=png&color=000000" alt="">
+                </span>
+                <span class="current-month">December 2024</span>
+                <span class="next-month"><img width="20"
+                    src="https://img.icons8.com/?size=100&id=wcK894NIt5Wv&format=png&color=000000" alt="">
+               </span>
+            </div>
+            <div class="datepicker-body">
+                <div class="day-of-week">S</div>
+                <div class="day-of-week">M</div>
+                <div class="day-of-week">T</div>
+                <div class="day-of-week">W</div>
+                <div class="day-of-week">T</div>
+                <div class="day-of-week">F</div>
+                <div class="day-of-week">S</div>
+
+                <!-- Días del mes -->
+                <div class="day"></div>
+                <div class="day"></div>
+                <div class="day"></div>
+                <div class="day"></div>
+                <div class="day">1</div>
+                <div class="day">2</div>
+                <div class="day">3</div>
+                <div class="day">4</div>
+                <div class="day">5</div>
+                <div class="day">6</div>
+                <div class="day">7</div>
+                <div class="day">8</div>
+                <div class="day">9</div>
+                <div class="day">10</div>
+                <div class="day">11</div>
+                <div class="day">12</div>
+                <div class="day">13</div>
+                <div class="day">14</div>
+                <div class="day">15</div>
+                <div class="day">16</div>
+                <div class="day">17</div>
+                <div class="day">18</div>
+                <div class="day">19</div>
+                <div class="day">20</div>
+                <div class="day">21</div>
+                <div class="day">22</div>
+                <div class="day">23</div>
+                <div class="day">24</div>
+                <div class="day">25</div>
+                <div class="day">26</div>
+                <div class="day">27</div>
+                <div class="day">28</div>
+                <div class="day">29</div>
+                <div class="day">30</div>
+                <div class="day">31</div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+
+<style>
+    /* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.datepicker-container {
+    position: relative;
+    display: inline-block;
+    font-family: "Nerko One", cursive;
+}
+
+.datepicker-input {
+    padding: 10px;
+    font-size: 16px;
+    width: 230px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: "Nerko One", cursive;
+}
+
+.calendar-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    cursor: pointer;
+    height: 2em;
+    width: 2em;
+    background-image: url('https://img.icons8.com/?size=100&id=imTS7WN6s95I&format=png&color=000000');
+    background-position: right 10px center, right 50px center; 
+    background-repeat: no-repeat;
+    background-size: 30px 30px, 1px 60%;
+}
+
+/* Estilo del Datepicker */
+.datepicker {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 250px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    display: inline-block; /* Se muestra al hacer clic en el campo */
+    z-index: 10;
+}
+
+.datepicker-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.datepicker-header span {
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.datepicker-body {
+    padding: 5px;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.day-of-week {
+    font-weight: bold;
+    text-align: center;
+}
+
+.day {
+    text-align: center;
+    padding: 7px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.day:hover {
+    background-color: #007BFF;
+    color: white;
+}
+
+.day.selected {
+    background-color: #007BFF;
+    color: white;
+}
+
+.prev-month img {
+    transform: rotate(180deg);
+}
+</style>
